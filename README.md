@@ -1,3 +1,6 @@
+> ⚠️ **DISCLAIMER: ACADEMIC STUDENT PROTOTYPE**  
+> This project is developed solely for educational and evaluation purposes for **Fundamentals of AI (23RAI111)** at Amrita Vishwa Vidyapeetham. It is **not clinically validated** and **does not replace professional medical advice, paramedics, doctors, or emergency dispatch**.  
+> **In any real-life emergency in India, immediately dial 112 (National Emergency) or 108 (Ambulance).**
 # LifeLine: AI First Aid Assistant
 
 A goal-based AI agent that guides a bystander through first aid, one step at a time, with a mobile-friendly website.
