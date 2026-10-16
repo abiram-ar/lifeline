@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b3b4a">
+  <meta name="description" content="LifeLine: step-by-step first-aid guidance for emergencies in India.">
+  <title>LifeLine · First Aid Assistant</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d7263d'/%3E%3Cpath d='M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z' fill='white'/%3E%3C/svg%3E">
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/static/icon-192.png">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/photo.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="LifeLine home">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#d7263d"/><path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z" fill="#fff"/></svg>
+      <span>LifeLine</span>
+    </a>
+    <span id="aiChip" class="chip" title="Checking AI status…">…</span>
+    <a class="sos" href="tel:112" aria-label="Call 112 emergency number">📞 <b>112</b></a>
+  </header>
+
+  <main id="app" tabindex="-1" aria-live="polite"><p class="loading">Loading…</p></main>
+
+  <footer class="foot">
+    <p><b>Not a substitute for professional care.</b> LifeLine gives general first-aid guidance based on Red Cross, St John Ambulance,
+    NHS and Indian national protocols. In any serious emergency call <a href="tel:112">112</a> or <a href="tel:108">108</a>.</p>
+  </footer>
+
+  <dialog id="askDlg" aria-labelledby="askTitle">
+    <div class="dlg-head">
+      <h2 id="askTitle">Ask a question</h2>
+      <button class="icon-btn" id="askClose" type="button" aria-label="Close">✕</button>
+    </div>
+    <div id="askLog" class="ask-log" aria-live="polite"></div>
+    <div id="askChips" class="chips"></div>
+    <form id="askForm" class="ask-form" autocomplete="off">
+      <input id="askInput" type="text" maxlength="400" placeholder="e.g. Can I give them water?" aria-label="Your question" required>
+      <button class="btn primary" type="submit">Ask</button>
+    </form>
+    <p class="muted small">Answers come only from the guide on screen. For anything else, call 112 / 108.</p>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="assertive" hidden></div>
+  <script src="/static/app.js" defer></script>
+  <script src="/static/photo.js" defer></script>
+</body>
+</html>
